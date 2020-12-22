@@ -22,15 +22,16 @@ void SaveLog(char* in)
 //PluginInfoPtr – указатель на структуру.
 void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 {
+	MessageBox(NULL, NULL, L"PluginInfo", MB_OK);
 	strcpy_s(PluginInfoPtr->Name, "R7024");
 	strcpy_s(PluginInfoPtr->Description,"Считыватель паспортов и виз СПВ - 7024М Fintech");
 	strcpy_s(PluginInfoPtr->Manufacturer, "FINTECH");
 	PluginInfoPtr->Capabilities = 268439564;
 	PluginInfoPtr->wReserved = 450;
 	PluginInfoPtr->dwReserved = 3435973836;
-	MessageBox(NULL, NULL, L"PluginInfo", MB_OK);
-	//char logtext[] = "Calling function PluginInfo";
-	//SaveLog(logtext);
+	
+	char logtext[] = "Calling function PluginInfo";
+	SaveLog(logtext);
 };
 
 //Инициализация считывателя.
@@ -41,8 +42,8 @@ int InitReader(void* HApp, WORD ClientID)
 {
 	
 	MessageBox(NULL, NULL, L"InitReader", MB_OK);
-	//char logtext[] = "Calling function: InitReader";
-	//SaveLog(logtext);
+	char logtext[] = "Calling function: InitReader";
+	SaveLog(logtext);
 	return 0;
 };
 

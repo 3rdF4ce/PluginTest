@@ -22,15 +22,16 @@ void SaveLog(char* in)
 	//PluginInfoPtr – указатель на структуру.
 void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 {
+	MessageBox(NULL, NULL, L"PluginRfidInfo", MB_OK);
 	strcpy_s(PluginInfoPtr->Name, "FintechR7024");
 	strcpy_s(PluginInfoPtr->Description, "RFID СПВ - 7024М Fintech");
 	strcpy_s(PluginInfoPtr->Manufacturer, "Regula");
 	PluginInfoPtr->Capabilities = 536870912;
 	PluginInfoPtr->wReserved = 500;
 	PluginInfoPtr->dwReserved = 3435973836;
-	MessageBox(NULL, NULL, L"GetPluginInfo", MB_OK);
-	//char logtext[] = "Calling function GetRfidPluginInfo";
-	//SaveLog(logtext);
+	
+	char logtext[] = "Calling function GetRfidPluginInfo";
+	SaveLog(logtext);
 
 };
 
@@ -41,8 +42,8 @@ void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 int InitReader(void* HApp, WORD ClientID)
 {
 	MessageBox(NULL, NULL, L"InitRfidReader", MB_OK);
-	//char logtext[] = "Calling function InitRfidReader";
-	//SaveLog(logtext);
+	char logtext[] = "Calling function InitRfidReader";
+	SaveLog(logtext);
 	return 0;
 };
 

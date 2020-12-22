@@ -42,7 +42,7 @@ extern "C" PLUGINRFIDREADER_API void StopReader();
 	//Считывает данные из бесконтактной ИС
 extern "C" PLUGINRFIDREADER_API void ReadData();
 	//Принудительно останавливает считывание данных из бесконтактной ИС
-extern "C" PLUGINRFIDREADER_API void CancelRfidData();
+extern "C" PLUGINRFIDREADER_API void CancelReadData();
 	//Установка ключа для чтения данных, защищённых с помощью механизма ВАС.
 	//В качестве ключа всегда используется строка МСЗ, прочитанная OCR
 extern "C" PLUGINRFIDREADER_API void SetBACKey();

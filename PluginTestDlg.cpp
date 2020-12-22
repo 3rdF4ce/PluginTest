@@ -226,7 +226,18 @@ void CPluginTestDlg::OnBnClickedGetPluginInfo()
 	// TODO: Add your control notification handler code here
 	_TReaderPluginInfo TRPI;
 	_TReaderPluginInfo* pTRPI = &TRPI;
-	GetPluginInfoDll(pTRPI);
+	try
+	{
+		if (GetPluginInfoDll == NULL)
+			throw 123;
+		GetPluginInfoDll(pTRPI);
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция GetPluginInfoDll не инициализирована!"));
+	}
+
 	
 }
 
@@ -236,19 +247,52 @@ void CPluginTestDlg::OnBnClickedInitReader()
 	// TODO: Add your control notification handler code here
 	void* p = NULL;
 	WORD w(0);
-	int result = InitReaderDll(p,w);
+	int result(0);
+	
+	try
+		{
+			if (InitReaderDll == NULL)
+				throw 123;
+			InitReaderDll(p, w);
+		}
+	catch(int i)
+		{
+			if(i == 123)
+				AfxMessageBox(_T("Функция InitReaderDll не инициализирована!"));
+		}
+	
 	//FreeLibrary(hDLL);
 }
 void CPluginTestDlg::OnBnClickedReInitReader()
 {
 	// TODO: Add your control notification handler code here
-	ReInitReaderDll();
+	try
+	{
+		if (ReInitReaderDll == NULL)
+			throw 123;
+		ReInitReaderDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция ReInitReaderDll не инициализирована!"));
+	}
 }
 
 void CPluginTestDlg::OnBnClickedDeinitReader()
 {
 	// TODO: Add your control notification handler code here
-	DeInitReaderDll();
+	try
+	{
+		if (DeInitReaderDll == NULL)
+			throw 123;
+		DeInitReaderDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция DeInitReaderDll не инициализирована!"));
+	}
 	//FreeLibrary(hDLL);
 }
 
@@ -256,21 +300,51 @@ void CPluginTestDlg::OnBnClickedDeinitReader()
 void CPluginTestDlg::OnBnClickedIsReaderActive()
 {
 	// TODO: Add your control notification handler code here
-	IsReaderActiveDll();
+	try
+	{
+		if (IsReaderActiveDll == NULL)
+			throw 123;
+		IsReaderActiveDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция IsReaderActiveDll не инициализирована!"));
+	}
 }
 
 
 void CPluginTestDlg::OnBnClickedSetocrmode()
 {
 	// TODO: Add your control notification handler code here
-	SetOCRModeDll();
+	try
+	{
+		if (SetOCRModeDll == NULL)
+			throw 123;
+		SetOCRModeDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция SetOCRModeDll не инициализирована!"));
+	}
 }
 
 
 void CPluginTestDlg::OnBnClickedSetscanmode()
 {
 	// TODO: Add your control notification handler code here
-	SetScanModeDll();
+	try
+	{
+		if (SetScanModeDll == NULL)
+			throw 123;
+		SetScanModeDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция SetScanModeDll не инициализирована!"));
+	}
 }
 
 
@@ -282,8 +356,17 @@ void CPluginTestDlg::OnBnClickedInitRfidReader()
 	// TODO: Add your control notification handler code here
 	void* p = NULL;
 	WORD w(0);
-	int result = InitRfidReaderDll(p, w);
-	int stop = 8;
+	try
+	{
+		if (InitRfidReaderDll == NULL)
+			throw 123;
+		InitRfidReaderDll(p, w);
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция InitRfidReaderDll не инициализирована!"));
+	}
 
 }
 
@@ -292,8 +375,19 @@ void CPluginTestDlg::OnBnClickedGetrfidinfo()
 	// TODO: Add your control notification handler code here
 	_TReaderPluginInfo TRPI;
 	_TReaderPluginInfo* pTRPI = &TRPI;
-	GetRfidPluginInfoDll(pTRPI);
-	int stop = 8;
+	
+	try
+	{
+		if (GetRfidPluginInfoDll == NULL)
+			throw 123;
+		GetRfidPluginInfoDll(pTRPI);
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция GetRfidPluginInfoDll не инициализирована!"));
+	}
+	
 }
 
 
@@ -301,6 +395,17 @@ void CPluginTestDlg::OnBnClickedReInitRfidReader()
 {
 	// TODO: Add your control notification handler code here
 	ReInitRfidReaderDll();
+	try
+	{
+		if (ReInitRfidReaderDll == NULL)
+			throw 123;
+		ReInitRfidReaderDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция ReInitRfidReaderDll не инициализирована!"));
+	}
 }
 
 
@@ -308,26 +413,51 @@ void CPluginTestDlg::OnBnClickedReInitRfidReader()
 void CPluginTestDlg::OnBnClickedDeinitRfidReader()
 {
 	// TODO: Add your control notification handler code here
-	DeInitRfidReaderDll();
+	try
+	{
+		if (DeInitRfidReaderDll == NULL)
+			throw 123;
+		DeInitRfidReaderDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция DeInitRfidReaderDll не инициализирована!"));
+	}
 }
-
-
-
-
 
 
 void CPluginTestDlg::OnBnClickedReadRfidData()
 {
 	// TODO: Add your control notification handler code here
-	ReadRfidDataDll();
+	try
+	{
+		if (ReadRfidDataDll == NULL)
+			throw 123;
+		ReadRfidDataDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция ReadRfidDataDll не инициализирована!"));
+	}
 }
 
 
 void CPluginTestDlg::OnBnClickedCancelReadRfidData()
 {
 	// TODO: Add your control notification handler code here
-	
-	CancelReadRfidDataDll();
+	try
+	{
+		if (CancelReadRfidDataDll == NULL)
+			throw 123;
+		CancelReadRfidDataDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция CancelReadRfidDataDll не инициализирована!"));
+	}
 	
 }
 
@@ -335,5 +465,15 @@ void CPluginTestDlg::OnBnClickedCancelReadRfidData()
 void CPluginTestDlg::OnBnClickedSetBacKey()
 {
 	// TODO: Add your control notification handler code here
-	SetRfidBACKeyDll();
+	try
+	{
+		if (SetRfidBACKeyDll == NULL)
+			throw 123;
+		SetRfidBACKeyDll();
+	}
+	catch (int i)
+	{
+		if (i == 123)
+			AfxMessageBox(_T("Функция SetRfidBACKeyDll не инициализирована!"));
+	}
 }

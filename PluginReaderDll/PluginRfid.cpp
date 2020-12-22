@@ -28,8 +28,9 @@ void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 	PluginInfoPtr->Capabilities = 536870912;
 	PluginInfoPtr->wReserved = 500;
 	PluginInfoPtr->dwReserved = 3435973836;
-	char logtext[] = "Calling function GetRfidPluginInfo";
-	SaveLog(logtext);
+	MessageBox(NULL, NULL, L"GetPluginInfo", MB_OK);
+	//char logtext[] = "Calling function GetRfidPluginInfo";
+	//SaveLog(logtext);
 
 };
 
@@ -39,9 +40,9 @@ void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 	//Возвращает признак успешной(0) или аварийной(1) инициализации
 int InitReader(void* HApp, WORD ClientID)
 {
-
-	char logtext[] = "Calling function InitRfidReader";
-	SaveLog(logtext);
+	MessageBox(NULL, NULL, L"InitRfidReader", MB_OK);
+	//char logtext[] = "Calling function InitRfidReader";
+	//SaveLog(logtext);
 	return 0;
 };
 

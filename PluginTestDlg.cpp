@@ -253,7 +253,8 @@ void CPluginTestDlg::OnBnClickedInitReader()
 		{
 			if (InitReaderDll == NULL)
 				throw 123;
-			InitReaderDll(p, w);
+			if(!InitReaderDll(p, w))
+				AfxMessageBox(_T("—читыватель инициализирован."));
 		}
 	catch(int i)
 		{

@@ -6,3 +6,54 @@ Calling function: PluginInfo
 Calling function: PluginInfo
 1608475987:Calling function: PluginInfo
 1608475995:Calling function: InitReader
+Tue Dec 22 15:14:00 2020
+Calling function PluginInfo
+
+Tue Dec 22 15:14:06 2020
+Calling function: InitReader
+
+Tue Dec 22 15:14:18 2020
+Calling function PluginInfo
+
+Tue Dec 22 15:14:19 2020
+Calling function: ReinitReader
+
+Tue Dec 22 15:14:21 2020
+Calling function: InitReader
+
+Tue Dec 22 15:14:23 2020
+Calling function: SetOCRMode
+
+Tue Dec 22 15:15:53 2020
+Calling function CancelReadRfidReader
+
+Tue Dec 22 16:01:07 2020
+Calling function InitRfidReader
+
+Tue Dec 22 16:06:56 2020
+Calling function InitRfidReader
+
+Tue Dec 22 16:06:57 2020
+Calling function GetRfidPluginInfo
+
+Tue Dec 22 16:06:58 2020
+Calling function ReinitRfidReader
+
+Tue Dec 22 16:06:58 2020
+Calling function ReinitRfidReader
+
+Tue Dec 22 16:07:13 2020
+Calling function InitRfidReader
+
+Tue Dec 22 16:07:14 2020
+Calling function GetRfidPluginInfo
+
+Tue Dec 22 16:07:15 2020
+Calling function PluginInfo
+
+Tue Dec 22 16:07:16 2020
+Calling function: InitReader
+
+Tue Dec 22 16:07:17 2020
+Calling function: IsReaderActive
+

@@ -28,9 +28,9 @@ void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 	PluginInfoPtr->Capabilities = 268439564;
 	PluginInfoPtr->wReserved = 450;
 	PluginInfoPtr->dwReserved = 3435973836;
-	//MessageBox(NULL, NULL, L"PluginInfo", MB_OK);
-	char logtext[] = "Calling function PluginInfo";
-	SaveLog(logtext);
+	MessageBox(NULL, NULL, L"PluginInfo", MB_OK);
+	//char logtext[] = "Calling function PluginInfo";
+	//SaveLog(logtext);
 };
 
 //Инициализация считывателя.
@@ -40,9 +40,9 @@ void GetPluginInfo(_TReaderPluginInfo* PluginInfoPtr)
 int InitReader(void* HApp, WORD ClientID) 
 {
 	
-	//MessageBox(NULL, NULL, L"InitReader", MB_OK);
-	char logtext[] = "Calling function: InitReader";
-	SaveLog(logtext);
+	MessageBox(NULL, NULL, L"InitReader", MB_OK);
+	//char logtext[] = "Calling function: InitReader";
+	//SaveLog(logtext);
 	return 0;
 };
 
@@ -73,7 +73,7 @@ bool IsReaderActive()
 	//MessageBox(NULL, NULL, L"IsReaderActive", MB_OK);
 	char logtext[] = "Calling function: IsReaderActive";
 	SaveLog(logtext);
-	return false;
+	return true;
 };
 
 //Тип PChar255 имеет описание : char PChar255[256].
